@@ -59,7 +59,7 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _FogColor: {r: 1, g: 1, b: 1, a: 0.08627451}
+    - _FogColor: {r: 1, g: 1, b: 1, a: 0.05882353}
     - _FogSpeed: {r: 1, g: 0, b: 0, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

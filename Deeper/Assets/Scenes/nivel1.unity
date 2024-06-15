@@ -4264,7 +4264,7 @@ Tilemap:
       - {fileID: 566250092, guid: 88cee41ebb8530c439fd55f7b3691c22, type: 3}
       - {fileID: 22808773, guid: 88cee41ebb8530c439fd55f7b3691c22, type: 3}
       - {fileID: -1453086814, guid: 88cee41ebb8530c439fd55f7b3691c22, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -26, y: 2, z: 0}
@@ -4664,7 +4664,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4681,10 +4681,10 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 7
     m_Data: {fileID: -1818893835, guid: 88cee41ebb8530c439fd55f7b3691c22, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 826224397, guid: 88cee41ebb8530c439fd55f7b3691c22, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 826224397, guid: 88cee41ebb8530c439fd55f7b3691c22, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 8
     m_Data:
@@ -5672,26 +5672,6 @@ PrefabInstance:
     - target: {fileID: 5125155039859469616, guid: 7e2d59d78749c4d45b0c935ed8816281, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630159489566199728, guid: 7e2d59d78749c4d45b0c935ed8816281, type: 3}
-      propertyPath: NoiseModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630159489566199728, guid: 7e2d59d78749c4d45b0c935ed8816281, type: 3}
-      propertyPath: LightsModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630159489566199728, guid: 7e2d59d78749c4d45b0c935ed8816281, type: 3}
-      propertyPath: NoiseModule.frequency
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630159489566199728, guid: 7e2d59d78749c4d45b0c935ed8816281, type: 3}
-      propertyPath: NoiseModule.strength.scalar
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630159489566199728, guid: 7e2d59d78749c4d45b0c935ed8816281, type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7011480222419092872, guid: 7e2d59d78749c4d45b0c935ed8816281, type: 3}
       propertyPath: m_Name
