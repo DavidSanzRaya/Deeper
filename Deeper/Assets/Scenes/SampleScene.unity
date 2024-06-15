@@ -716,33 +716,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1452118105594788305, guid: 8afa2139b1cd31946ae32640ff6861b6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3801122827169740632, guid: 8afa2139b1cd31946ae32640ff6861b6, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3801122827169740632, guid: 8afa2139b1cd31946ae32640ff6861b6, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055013680743225314, guid: 8afa2139b1cd31946ae32640ff6861b6, type: 3}
-      propertyPath: m_Size.x
-      value: 0.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055013680743225314, guid: 8afa2139b1cd31946ae32640ff6861b6, type: 3}
-      propertyPath: m_Size.y
-      value: 0.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055013680743225314, guid: 8afa2139b1cd31946ae32640ff6861b6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 1982688410, guid: da07913dcf0b4eb4bb081ce2234d5a40, type: 3}
-    - target: {fileID: 4055013680743225314, guid: 8afa2139b1cd31946ae32640ff6861b6, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6713947238918036952, guid: 8afa2139b1cd31946ae32640ff6861b6, type: 3}
       propertyPath: m_LocalPosition.x

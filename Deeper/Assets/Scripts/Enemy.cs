@@ -89,7 +89,6 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("UwU");
         Player player;
         if (player = collision.GetComponent<Player>())
         {
