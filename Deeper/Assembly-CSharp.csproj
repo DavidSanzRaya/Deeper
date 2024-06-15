@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\VolumeManager.cs" />
     <Compile Include="Assets\Scripts\FadeIn.cs" />
     <Compile Include="Assets\Scripts\PreferenceKeys.cs" />
+    <Compile Include="Assets\PlayerDeath.cs" />
     <Compile Include="Assets\Scripts\PlayButton.cs" />
     <Compile Include="Assets\scriptss\GameManager.cs" />
     <Compile Include="Assets\script-checkpoint\Checkpoint.cs" />
