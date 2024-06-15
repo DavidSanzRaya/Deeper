@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\VolumeManager.cs" />
     <Compile Include="Assets\Scripts\PreferenceKeys.cs" />
+    <Compile Include="Assets\Scripts\ButtonAudioClipsHolder.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
   </ItemGroup>
   <ItemGroup>
