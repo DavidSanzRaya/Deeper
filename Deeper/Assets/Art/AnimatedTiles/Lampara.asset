@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Lampara
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 636023332, guid: 88cee41ebb8530c439fd55f7b3691c22, type: 3}
-  m_MinSpeed: 1
-  m_MaxSpeed: 1
+  - {fileID: 566250092, guid: 88cee41ebb8530c439fd55f7b3691c22, type: 3}
+  - {fileID: 22808773, guid: 88cee41ebb8530c439fd55f7b3691c22, type: 3}
+  - {fileID: -1453086814, guid: 88cee41ebb8530c439fd55f7b3691c22, type: 3}
+  m_MinSpeed: 5
+  m_MaxSpeed: 5
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
   m_TileColliderType: 0
