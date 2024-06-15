@@ -58,11 +58,20 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.10f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\PlayerAnim.cs" />
     <Compile Include="Assets\Scripts\SceneManager.cs" />
     <Compile Include="Assets\Scripts\VolumeManager.cs" />
+    <Compile Include="Assets\Scripts\FadeIn.cs" />
     <Compile Include="Assets\Scripts\PreferenceKeys.cs" />
+    <Compile Include="Assets\PlayerDeath.cs" />
+    <Compile Include="Assets\Scripts\ParallaxCamera.cs.cs" />
     <Compile Include="Assets\Scripts\ButtonAudioClipsHolder.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\ParallaxBackground.cs.cs" />
+    <Compile Include="Assets\scriptss\GameManager.cs" />
+    <Compile Include="Assets\script-checkpoint\Checkpoint.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\ParallaxLayer.cs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Art\Fonts\8_bit_pusab\readme.txt" />
@@ -726,6 +735,9 @@
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
     </Reference>
@@ -878,6 +890,9 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>

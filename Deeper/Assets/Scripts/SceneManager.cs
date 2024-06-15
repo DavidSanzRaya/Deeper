@@ -2,8 +2,16 @@ using UnityEngine;
 
 public class SceneManager : MonoBehaviour
 {
+    public FadeIn fadeIn;
+
     public void LoadGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("nivl");
+        fadeIn.FadeInEffect();
+        Invoke("OpenScene", 2.5f);
+    }
+
+    void OpenScene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("nivel1");
     }
 }
