@@ -62,6 +62,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float endedJumpEarlyGravityMultyplier = 3;
 
+    [SerializeField]
+    private GameObject deathAnim;
+
     private void OnEnable()
     {
         time = 0;
@@ -236,5 +239,11 @@ public class Player : MonoBehaviour
         {
             jumpHeld = false;
         }
+    }
+
+    public void OnDie()
+    {
+        gameObject.SetActive(false);
+        Instantiate(deathAnim, transform.position, Quaternion.identity);
     }
 }

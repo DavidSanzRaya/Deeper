@@ -66,6 +66,7 @@ MonoBehaviour:
   gravity: 65
   maxFallSpeed: 20
   endedJumpEarlyGravityMultyplier: 3
+  deathAnim: {fileID: 3460904002966651461, guid: a114ddba0a87ba245b13c6816b71aa6d, type: 3}
 --- !u!114 &5099179204230855461
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     private Vector3 direction;
     private float lastDistanceFromTarget;
     private GameObject currentTarget;
+    private bool animationEnded = false;
 
     [SerializeField]
     private float distanceFromPlayerToWakeUp;
@@ -33,18 +34,27 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if (!asleep)
+        if (!asleep && animationEnded)
         {
             Move();
         }
 
         if (Vector2.Distance(player.transform.position, transform.position) < distanceFromPlayerToWakeUp)
         {
-            asleep = false;
+            if (asleep)
+            {
+                asleep = false;
+                anim.SetTrigger("WakeUp");
+            }
         }
         else
         {
-            asleep = true;
+            if (!asleep)
+            {
+                asleep = true;
+                anim.SetTrigger("Sleep");
+                animationEnded = false;
+            }
         }
     }
 
@@ -72,8 +82,18 @@ public class Enemy : MonoBehaviour
         lastDistanceFromTarget = distanceFromTarget;
     }
 
+    public void OnAnimationEnded()
+    {
+        animationEnded = true;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        Debug.Log("UwU");
+        Player player;
+        if (player = collision.GetComponent<Player>())
+        {
+            player.OnDie();
+        }
     }
 }
