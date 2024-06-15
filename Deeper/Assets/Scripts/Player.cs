@@ -69,7 +69,6 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         colider = GetComponent<BoxCollider2D>();
-        mask =(1 << 7) | (1 << 10) | (1 << 9) | (1 << 8);
         Physics2D.queriesStartInColliders = false;
     }
 
@@ -105,8 +104,8 @@ public class Player : MonoBehaviour
 
     private void HandleCollisions()
     {
-        bool groundCollision = Physics2D.BoxCast(colider.offset, colider.size, 0, Vector2.down, distanceForGrounded, ~mask);
-        bool ceilingCollision = Physics2D.BoxCast(colider.offset, colider.size, 0, Vector2.up, distanceForGrounded, ~mask);
+        bool groundCollision = Physics2D.BoxCast(transform.position, colider.size, 0, Vector2.down, distanceForGrounded, ~mask);
+        bool ceilingCollision = Physics2D.BoxCast(transform.position, colider.size, 0, Vector2.up, distanceForGrounded, ~mask);
 
         if (ceilingCollision)
         {
