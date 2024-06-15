@@ -24,9 +24,11 @@ public class Player : MonoBehaviour
     private bool coyoteTimeAvailable;
     private bool endedJumpEarly;
     private bool grounded;
+    public bool Grounded { get { return grounded;} }
     private bool lookingRight;
 
     private Vector2 velocity;
+    public Vector2 Velocity { get { return velocity;}}
 
     [SerializeField]
     private Animator anim;
@@ -178,6 +180,7 @@ public class Player : MonoBehaviour
         endedJumpEarly = false;
         velocity.y = doubleJumpForce;
         doubleJumpUsed = true;
+        anim.SetTrigger("Jump");
     }
 
     private void HandleXVelocity()

@@ -18,11 +18,10 @@ public class PlayerAnim : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
     }
 
-    // Update is called once per frame
     void LateUpdate()
     {
         SpriteFlip();
-        Move();
+        UpdateAnimations();
     }
 
     private void SpriteFlip()
@@ -31,8 +30,10 @@ public class PlayerAnim : MonoBehaviour
         sprite.flipX = lookingRight;
     }
 
-    private void Move()
+    private void UpdateAnimations()
     {
         anim.SetBool("Moving", player.Move != 0);
+        anim.SetBool("Grounded", player.Grounded);
+        anim.SetBool("Falling", player.Velocity.y < 0 && !player.Grounded);
     }
 }
