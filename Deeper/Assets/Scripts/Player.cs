@@ -11,9 +11,10 @@ public class Player : MonoBehaviour
     [SerializeField]
     private LayerMask mask;
 
-    protected bool jump;
-    protected bool jumpHeld;
-    protected float move;
+    private bool jump;
+    private bool jumpHeld;
+    private float move;
+    public float Move {get { return move;}}
 
     private bool useJump;
     private bool doubleJumpUsed;
@@ -26,6 +27,9 @@ public class Player : MonoBehaviour
     private bool lookingRight;
 
     private Vector2 velocity;
+
+    [SerializeField]
+    private Animator anim;
 
     [SerializeField]
     private float distanceForGrounded = 0.05f;
@@ -70,6 +74,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         colider = GetComponent<BoxCollider2D>();
         Physics2D.queriesStartInColliders = false;
+
     }
 
     private void FixedUpdate()
@@ -94,11 +99,11 @@ public class Player : MonoBehaviour
 
         if (move < 0)
         {
-            lookingRight = false;
+            lookingRight = true;
         }
         else if (move > 0)
         {
-            lookingRight = true;
+            lookingRight = false;
         }
     }
 
@@ -165,6 +170,7 @@ public class Player : MonoBehaviour
         bufferedJumpAvailable = false;
         coyoteTimeAvailable = false;
         velocity.y = jumpForce;
+        anim.SetTrigger("Jump");
     }
 
     private void DoubleJump()
