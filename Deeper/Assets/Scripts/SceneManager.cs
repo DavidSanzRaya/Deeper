@@ -1,10 +1,9 @@
-using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class SceneManager : MonoBehaviour
 {
     public void LoadGame()
     {
-        //SceneManager.LoadScene(1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("nivl");
     }
 }
