@@ -27,7 +27,7 @@ public class PlayerAnim : MonoBehaviour
     private void SpriteFlip()
     {
         lookingRight = player.GetDirection();
-        sprite.flipX = lookingRight;
+        sprite.flipX = lookingRight; 
     }
 
     private void UpdateAnimations()

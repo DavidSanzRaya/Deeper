@@ -65,6 +65,13 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject deathAnim;
 
+    [SerializeField]
+    private AudioClip jumpClip;
+    [SerializeField]
+    private AudioClip dieClip;
+
+    private AudioSource audioSource;
+
     private void OnEnable()
     {
         time = 0;
@@ -79,7 +86,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         colider = GetComponent<BoxCollider2D>();
         Physics2D.queriesStartInColliders = false;
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -170,6 +177,7 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
+        audioSource.PlayOneShot(jumpClip);
         useJump = false;
         endedJumpEarly = false;
         bufferedJumpAvailable = false;
@@ -184,6 +192,7 @@ public class Player : MonoBehaviour
         velocity.y = doubleJumpForce;
         doubleJumpUsed = true;
         anim.SetTrigger("Jump");
+        audioSource.PlayOneShot(jumpClip);
     }
 
     private void HandleXVelocity()
@@ -243,8 +252,11 @@ public class Player : MonoBehaviour
 
     public void OnDie()
     {
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
+        anim.gameObject.SetActive(false);
+        GetComponent<PlayerInput>().actions.Disable();
         Instantiate(deathAnim, transform.position, Quaternion.identity);
+        audioSource.PlayOneShot(dieClip);
     }
 
     public void OnGoDeeper()
