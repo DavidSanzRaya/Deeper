@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 
 public class GoDeeper : MonoBehaviour
 {
+    [SerializeField] 
+    private LayersManager layerManger;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Player player;
@@ -12,6 +15,6 @@ public class GoDeeper : MonoBehaviour
         {
             player.OnGoDeeper();
         }
-
+        layerManger.NextLevel();
     }
 }

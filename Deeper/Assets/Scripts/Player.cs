@@ -114,7 +114,7 @@ public class Player : MonoBehaviour
 
     private void HandleCollisions()
     {
-        bool groundCollision = Physics2D.BoxCast(transform.position, colider.size, 0, Vector2.down, distanceForGrounded, ~mask);
+        bool groundCollision = Physics2D.BoxCast(new Vector2(transform.position.x + colider.offset.x, transform.position.y + colider.offset.y), colider.size, 0, Vector2.down, distanceForGrounded, ~mask);
         bool ceilingCollision = Physics2D.BoxCast(transform.position, colider.size, 0, Vector2.up, distanceForGrounded, ~mask);
 
         if (ceilingCollision)
