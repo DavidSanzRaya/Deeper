@@ -252,11 +252,11 @@ public class Player : MonoBehaviour
 
     public void OnDie()
     {
+        audioSource.PlayOneShot(dieClip);
         //gameObject.SetActive(false);
         anim.gameObject.SetActive(false);
         GetComponent<PlayerInput>().actions.Disable();
         Instantiate(deathAnim, transform.position, Quaternion.identity);
-        audioSource.PlayOneShot(dieClip);
     }
 
     public void OnGoDeeper()
