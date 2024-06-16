@@ -63,11 +63,7 @@ public class Player : MonoBehaviour
     private float endedJumpEarlyGravityMultyplier = 3;
 
     [SerializeField]
-    private AudioClip jumpClip;
-    [SerializeField]
-    private AudioClip dieClip;
-
-    private AudioSource audioSource;
+    private GameObject deathAnim;
 
     private void OnEnable()
     {
@@ -83,7 +79,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         colider = GetComponent<BoxCollider2D>();
         Physics2D.queriesStartInColliders = false;
-        audioSource = GetComponent<AudioSource>();
+
     }
 
     private void FixedUpdate()
@@ -118,7 +114,7 @@ public class Player : MonoBehaviour
 
     private void HandleCollisions()
     {
-        bool groundCollision = Physics2D.BoxCast(transform.position, colider.size, 0, Vector2.down, distanceForGrounded, ~mask);
+        bool groundCollision = Physics2D.BoxCast(new Vector2(transform.position.x + colider.offset.x, transform.position.y + colider.offset.y), colider.size, 0, Vector2.down, distanceForGrounded, ~mask);
         bool ceilingCollision = Physics2D.BoxCast(transform.position, colider.size, 0, Vector2.up, distanceForGrounded, ~mask);
 
         if (ceilingCollision)
@@ -174,7 +170,6 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        audioSource.PlayOneShot(jumpClip);
         useJump = false;
         endedJumpEarly = false;
         bufferedJumpAvailable = false;
@@ -185,7 +180,6 @@ public class Player : MonoBehaviour
 
     private void DoubleJump()
     {
-        audioSource.PlayOneShot(jumpClip);
         endedJumpEarly = false;
         velocity.y = doubleJumpForce;
         doubleJumpUsed = true;
@@ -245,5 +239,22 @@ public class Player : MonoBehaviour
         {
             jumpHeld = false;
         }
+    }
+
+    public void OnDie()
+    {
+        gameObject.SetActive(false);
+        Instantiate(deathAnim, transform.position, Quaternion.identity);
+    }
+
+    public void OnGoDeeper()
+    {
+        GetComponent<PlayerInput>().actions.Disable();
+        anim.SetTrigger("GoDeeper");
+    }
+
+    public void OnStoppedGoingDeeper()
+    {
+        GetComponent<PlayerInput>().actions.Enable();
     }
 }
