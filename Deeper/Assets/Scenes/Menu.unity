@@ -562,7 +562,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 812618256}
+        m_TargetAssemblyTypeName: FullscreenToggle, Assembly-CSharp
+        m_MethodName: setFullscreen
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &156517009
 GameObject:
@@ -1040,6 +1052,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1969217141}
     m_Modifications:
+    - target: {fileID: 87271785467597635, guid: 4b8dd634a21fbd946b265029216e7668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 87271785467597635, guid: 4b8dd634a21fbd946b265029216e7668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 87271785467597635, guid: 4b8dd634a21fbd946b265029216e7668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 538174293}
+    - target: {fileID: 87271785467597635, guid: 4b8dd634a21fbd946b265029216e7668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 87271785467597635, guid: 4b8dd634a21fbd946b265029216e7668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 87271785467597635, guid: 4b8dd634a21fbd946b265029216e7668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ExitButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 87271785467597635, guid: 4b8dd634a21fbd946b265029216e7668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 821232108996359771, guid: 4b8dd634a21fbd946b265029216e7668, type: 3}
       propertyPath: m_Name
       value: 'Exit Button '
@@ -1362,6 +1402,7 @@ GameObject:
   - component: {fileID: 538174291}
   - component: {fileID: 538174290}
   - component: {fileID: 538174292}
+  - component: {fileID: 538174293}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -1411,6 +1452,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeInOutImage: {fileID: 810565941}
   duracion: 1
+--- !u!114 &538174293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538174289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 818ebcc76ccaf8841a114c38228d1869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &581361855
 GameObject:
   m_ObjectHideFlags: 0
@@ -2156,6 +2209,7 @@ GameObject:
   - component: {fileID: 812618253}
   - component: {fileID: 812618255}
   - component: {fileID: 812618254}
+  - component: {fileID: 812618256}
   m_Layer: 5
   m_Name: Options_GRP
   m_TagString: Untagged
@@ -2228,6 +2282,18 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &812618256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812618250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb7f5d1a82269c14184fd66d13dd84f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &838791602
 GameObject:
   m_ObjectHideFlags: 0
@@ -5194,7 +5260,7 @@ Tilemap:
       - {fileID: 566250092, guid: 88cee41ebb8530c439fd55f7b3691c22, type: 3}
       - {fileID: 22808773, guid: 88cee41ebb8530c439fd55f7b3691c22, type: 3}
       - {fileID: -1453086814, guid: 88cee41ebb8530c439fd55f7b3691c22, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:

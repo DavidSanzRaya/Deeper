@@ -12,6 +12,6 @@ public class SceneManager : MonoBehaviour
 
     void OpenScene()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("nivel1");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("game");
     }
 }
