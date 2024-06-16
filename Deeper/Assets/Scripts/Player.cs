@@ -260,6 +260,7 @@ public class Player : MonoBehaviour
 
     public void OnDie()
     {
+        GetComponent<Collider2D>().enabled = false;
         audioSource.PlayOneShot(dieClip);
         anim.gameObject.SetActive(false);
         GetComponent<PlayerInput>().actions.Disable();
@@ -269,6 +270,7 @@ public class Player : MonoBehaviour
 
     public void Respawn()
     {
+        GetComponent<Collider2D>().enabled = true;
         anim.gameObject.SetActive(true);
         GetComponent<PlayerInput>().actions.Enable();
         transform.position = CheckpointManager.instance.GetCurrentCheckpoint().transform.position;

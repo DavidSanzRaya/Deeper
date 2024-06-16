@@ -9,7 +9,7 @@ public class Checkpoint : MonoBehaviour
 
     private Animator animator;
 
-    private bool check = false;
+    [SerializeField] private int level;
 
     private void Awake()
     {
@@ -26,7 +26,7 @@ public class Checkpoint : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             animator.SetTrigger("check");
-            CheckpointManager.instance.NextLevel();
+            CheckpointManager.instance.NextLevel(level);
         }
         
     }

@@ -50,15 +50,18 @@ public class CheckpointManager : MonoBehaviour
     }
 
     [ContextMenu("NextLevel")]
-    public void NextLevel()
+    public void NextLevel(int level)
     {
-        if (currentLevel < checkpoints.Length)
-        {
-            currentCheckpoint.GetComponent<Collider2D>().enabled = false;
-            currentLevel++;
-            currentCheckpoint = checkpoints[currentLevel];
-            currentCheckpoint.GetComponent<Collider2D>().enabled = true;
-        }
+        //if (currentLevel < checkpoints.Length)
+        //{
+        //    //currentCheckpoint.GetComponent<Collider2D>().enabled = false;
+        //    currentLevel++;
+        //    currentCheckpoint = checkpoints[currentLevel];
+        //    currentCheckpoint.GetComponent<Collider2D>().enabled = false;
+        //}
+
+        currentLevel = level;
+        currentCheckpoint = checkpoints[currentLevel];
     }
 
     public Checkpoint GetCurrentCheckpoint()
