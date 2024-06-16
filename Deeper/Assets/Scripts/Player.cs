@@ -62,6 +62,13 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float endedJumpEarlyGravityMultyplier = 3;
 
+    [SerializeField]
+    private AudioClip jumpClip;
+    [SerializeField]
+    private AudioClip dieClip;
+
+    private AudioSource audioSource;
+
     private void OnEnable()
     {
         time = 0;
@@ -76,7 +83,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         colider = GetComponent<BoxCollider2D>();
         Physics2D.queriesStartInColliders = false;
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -167,6 +174,7 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
+        audioSource.PlayOneShot(jumpClip);
         useJump = false;
         endedJumpEarly = false;
         bufferedJumpAvailable = false;
@@ -177,6 +185,7 @@ public class Player : MonoBehaviour
 
     private void DoubleJump()
     {
+        audioSource.PlayOneShot(jumpClip);
         endedJumpEarly = false;
         velocity.y = doubleJumpForce;
         doubleJumpUsed = true;
