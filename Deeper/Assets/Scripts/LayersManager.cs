@@ -85,5 +85,6 @@ public class LayersManager : MonoBehaviour
 
         player.gameObject.transform.localScale *= 1 - currentLevelIndex * 0.1f;
         player.GetComponentInParent<BoxCollider2D>().size *= 1 - currentLevelIndex * 0.1f;
+        GetComponentInParent<Player>().OnNextLevel(currentLevelIndex);
     }
 }
