@@ -9,7 +9,7 @@ public class ParallaxBackground : MonoBehaviour
 
     void Start()
     {
-        GoDeeper.OnDeeper += ChangeParallaxFactors;
+        //GoDeeper.OnDeeper += ChangeParallaxFactors;
 
         if (parallaxCamera == null)
             parallaxCamera = Camera.main.GetComponent<ParallaxCamera>();

@@ -1040,6 +1040,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1969217141}
     m_Modifications:
+    - target: {fileID: 87271785467597635, guid: 4b8dd634a21fbd946b265029216e7668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 87271785467597635, guid: 4b8dd634a21fbd946b265029216e7668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 87271785467597635, guid: 4b8dd634a21fbd946b265029216e7668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 538174290}
+    - target: {fileID: 87271785467597635, guid: 4b8dd634a21fbd946b265029216e7668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 87271785467597635, guid: 4b8dd634a21fbd946b265029216e7668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 87271785467597635, guid: 4b8dd634a21fbd946b265029216e7668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 87271785467597635, guid: 4b8dd634a21fbd946b265029216e7668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 821232108996359771, guid: 4b8dd634a21fbd946b265029216e7668, type: 3}
       propertyPath: m_Name
       value: 'Exit Button '
@@ -5194,7 +5222,7 @@ Tilemap:
       - {fileID: 566250092, guid: 88cee41ebb8530c439fd55f7b3691c22, type: 3}
       - {fileID: 22808773, guid: 88cee41ebb8530c439fd55f7b3691c22, type: 3}
       - {fileID: -1453086814, guid: 88cee41ebb8530c439fd55f7b3691c22, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
