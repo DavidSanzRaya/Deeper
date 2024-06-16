@@ -90,7 +90,7 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Player player;
-        if (player = collision.GetComponent<Player>())
+        if ((player = collision.GetComponent<Player>()) && gameObject.transform.parent.gameObject.layer == 3)
         {
             player.OnDie();
         }
