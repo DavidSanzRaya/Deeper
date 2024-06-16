@@ -76,5 +76,8 @@ public class LayersManager : MonoBehaviour
             child.gameObject.layer = currentLayerMask;
         }
         player.sortingOrder = levels.Count * 3 - currentLevelIndex * 3;
+
+        player.gameObject.transform.localScale *= 1 - currentLevelIndex * 0.1f;
+        player.GetComponentInParent<BoxCollider2D>().size *= 1 - currentLevelIndex * 0.1f;
     }
 }
