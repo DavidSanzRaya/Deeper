@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\VolumeManager.cs" />
     <Compile Include="Assets\Scripts\FadeIn.cs" />
     <Compile Include="Assets\Scripts\PreferenceKeys.cs" />
+    <Compile Include="Assets\Scripts\FullscreenToggle.cs" />
     <Compile Include="Assets\Scripts\Checkpoint.cs" />
     <Compile Include="Assets\Scripts\KillBehaviour.cs" />
     <Compile Include="Assets\Scripts\ParallaxCamera.cs.cs" />
