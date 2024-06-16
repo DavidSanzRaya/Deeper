@@ -269,4 +269,20 @@ public class Player : MonoBehaviour
     {
         GetComponent<PlayerInput>().actions.Enable();
     }
+
+    public void OnNextLevel(int nextLevel)
+    {
+        float multiplier = 0.1f * nextLevel;
+        distanceForGrounded *= multiplier;
+        jumpForce *= multiplier;
+        doubleJumpForce *= multiplier;
+        groundDeceleration *= multiplier;
+        airDeceleration *= multiplier;
+        maxSpeed *= multiplier;
+        acceleration *= multiplier;
+        groundedGravity *= multiplier;
+        gravity *= multiplier;
+        maxFallSpeed *= multiplier;
+        endedJumpEarlyGravityMultyplier *= multiplier;
+    }
 }
