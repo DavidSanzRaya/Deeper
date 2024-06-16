@@ -246,4 +246,15 @@ public class Player : MonoBehaviour
         gameObject.SetActive(false);
         Instantiate(deathAnim, transform.position, Quaternion.identity);
     }
+
+    public void OnGoDeeper()
+    {
+        GetComponent<PlayerInput>().actions.Disable();
+        anim.SetTrigger("GoDeeper");
+    }
+
+    public void OnStoppedGoingDeeper()
+    {
+        GetComponent<PlayerInput>().actions.Enable();
+    }
 }

@@ -8,4 +8,6 @@ public class Death : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+
 }
