@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,7 +8,7 @@ public class GoDeeper : MonoBehaviour
     [SerializeField] 
     private LayersManager layerManger;
 
-    public UnityEvent OnDeeper;
+    public static event Action OnDeeper;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

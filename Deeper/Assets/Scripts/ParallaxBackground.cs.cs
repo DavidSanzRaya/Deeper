@@ -9,6 +9,8 @@ public class ParallaxBackground : MonoBehaviour
 
     void Start()
     {
+        GoDeeper.OnDeeper += ChangeParallaxFactors;
+
         if (parallaxCamera == null)
             parallaxCamera = Camera.main.GetComponent<ParallaxCamera>();
 
@@ -39,6 +41,14 @@ public class ParallaxBackground : MonoBehaviour
         foreach (ParallaxLayer layer in parallaxLayers)
         {
             layer.Move(delta);
+        }
+    }
+
+    private void ChangeParallaxFactors()
+    {
+        foreach(ParallaxLayer layer in parallaxLayers)
+        {
+            layer.parallaxFactor -= 0.01f;
         }
     }
 }
