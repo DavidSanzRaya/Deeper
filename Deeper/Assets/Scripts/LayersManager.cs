@@ -17,6 +17,9 @@ public class LayersManager : MonoBehaviour
     [SerializeField]
     private SpriteRenderer player;
 
+    [SerializeField]
+    private GameObject depthPanel;
+
     private void Start()
     {
         levels[0].layer = currentLayerMask;
@@ -55,10 +58,13 @@ public class LayersManager : MonoBehaviour
                     TilemapRenderer tilemap;
                     if (tilemap = child.GetComponent<TilemapRenderer>())
                     {
-                        tilemap.sortingOrder = levels.Count * 3 - 1;
+                        tilemap.sortingOrder = levels.Count * 3 - (3 * i + 1);
                     }
                 }
             }
+            GameObject panel = GameObject.Instantiate(depthPanel, player.transform);
+
+            panel.GetComponent<SpriteRenderer>().sortingOrder = levels.Count * 3 - (3 * i - 1);
         }
     }
 
