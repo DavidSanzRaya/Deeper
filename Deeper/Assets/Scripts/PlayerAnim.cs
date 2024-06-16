@@ -12,10 +12,13 @@ public class PlayerAnim : MonoBehaviour
 
     private Animator anim;
 
+    Vector2 colliderOffset;
+
     private void Start()
     {
         player = GetComponent<Player>();
         anim = GetComponentInChildren<Animator>();
+        colliderOffset = player.GetComponent<BoxCollider2D>().offset;
     }
 
     void LateUpdate()
@@ -27,7 +30,16 @@ public class PlayerAnim : MonoBehaviour
     private void SpriteFlip()
     {
         lookingRight = player.GetDirection();
-        sprite.flipX = lookingRight; 
+        sprite.flipX = lookingRight;
+        if (lookingRight)
+        {
+            if (player.GetComponent<BoxCollider2D>().offset == colliderOffset)
+                player.GetComponent<BoxCollider2D>().offset = new Vector2(-colliderOffset.x, player.GetComponent<BoxCollider2D>().offset.y);
+        }
+        else
+            player.GetComponent<BoxCollider2D>().offset = colliderOffset;
+
+
     }
 
     private void UpdateAnimations()
