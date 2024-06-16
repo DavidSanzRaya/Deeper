@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\ParallaxBackground.cs.cs" />
     <Compile Include="Assets\scriptss\GameManager.cs" />
+    <Compile Include="Assets\Scripts\CreditsScene.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\ParallaxLayer.cs.cs" />
     <Compile Include="Assets\Scripts\GoDeeper.cs" />
