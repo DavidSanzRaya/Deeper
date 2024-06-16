@@ -4,6 +4,33 @@ using UnityEngine;
 
 public class CheckpointManager : MonoBehaviour
 {
+
+    private static CheckpointManager checkpointManager;
+
+    public static CheckpointManager instance
+    {
+        get
+        {
+            return RequestInstance();
+        }
+    }
+
+    static CheckpointManager RequestInstance()
+    {
+
+        if (checkpointManager == null)
+        {
+            checkpointManager = FindObjectOfType<CheckpointManager>();
+
+            if (checkpointManager == null)
+            {
+                GameObject gamelogicObject = new GameObject("CheckpointManager");
+                checkpointManager = gamelogicObject.AddComponent<CheckpointManager>();
+            }
+        }
+        return checkpointManager;
+    }
+
     private Player player;
 
     [SerializeField] private Checkpoint[] checkpoints;
@@ -30,12 +57,12 @@ public class CheckpointManager : MonoBehaviour
             currentCheckpoint.GetComponent<Collider2D>().enabled = false;
             currentLevel++;
             currentCheckpoint = checkpoints[currentLevel];
-            checkpoints[currentLevel].GetComponent<Collider2D>().enabled = true;
+            currentCheckpoint.GetComponent<Collider2D>().enabled = true;
         }
     }
 
-    public void Respawn()
+    public Checkpoint GetCurrentCheckpoint()
     {
-        player.transform.position = currentCheckpoint.transform.position;
+        return currentCheckpoint;
     }
 }

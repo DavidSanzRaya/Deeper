@@ -23,9 +23,10 @@ public class Checkpoint : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(!check && other.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("Player"))
         {
             animator.SetTrigger("check");
+            CheckpointManager.instance.NextLevel();
         }
         
     }

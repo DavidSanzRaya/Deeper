@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -79,6 +80,8 @@ public class Player : MonoBehaviour
         jump = false;
         useJump = false;
         jumpHeld = false;
+
+        
     }
 
     private void Awake()
@@ -87,6 +90,11 @@ public class Player : MonoBehaviour
         colider = GetComponent<BoxCollider2D>();
         Physics2D.queriesStartInColliders = false;
         audioSource = GetComponent<AudioSource>();
+    }
+
+    private void Start()
+    {
+        Death.OnEndDeathAnimation += Respawn;
     }
 
     private void FixedUpdate()
@@ -253,10 +261,18 @@ public class Player : MonoBehaviour
     public void OnDie()
     {
         audioSource.PlayOneShot(dieClip);
-        //gameObject.SetActive(false);
         anim.gameObject.SetActive(false);
         GetComponent<PlayerInput>().actions.Disable();
-        Instantiate(deathAnim, transform.position, Quaternion.identity);
+        GameObject g = Instantiate(deathAnim, transform.position, Quaternion.identity);
+        g.transform.localScale = anim.transform.localScale;
+    }
+
+    public void Respawn()
+    {
+        anim.gameObject.SetActive(true);
+        GetComponent<PlayerInput>().actions.Enable();
+        transform.position = CheckpointManager.instance.GetCurrentCheckpoint().transform.position;
+        Debug.Log(CheckpointManager.instance.GetCurrentCheckpoint().transform.position);
     }
 
     public void OnGoDeeper()
