@@ -4082,6 +4082,7 @@ MonoBehaviour:
   currentLayerMask: 3
   otherLayerMask: 6
   player: {fileID: 1098036181}
+  depthPanel: {fileID: 8205767379694275461, guid: e3327b064efd54148976975ce7454211, type: 3}
 --- !u!4 &1228231458 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4950152387189528392, guid: fc8d256d61d0a994aa1af9f80b17e2a5, type: 3}
