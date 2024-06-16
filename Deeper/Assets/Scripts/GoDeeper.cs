@@ -1,12 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 public class GoDeeper : MonoBehaviour
 {
     [SerializeField] 
     private LayersManager layerManger;
+
+    public UnityEvent OnDeeper;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,7 +15,8 @@ public class GoDeeper : MonoBehaviour
         if (player = collision.GetComponent<Player>())
         {
             player.OnGoDeeper();
+            layerManger.NextLevel();
+            OnDeeper?.Invoke();
         }
-        layerManger.NextLevel();
     }
 }

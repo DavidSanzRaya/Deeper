@@ -13,4 +13,8 @@ public class ParallaxLayer : MonoBehaviour
         transform.localPosition = newPos;
     }
 
+    public void ChangeParallaxFactor()
+    {
+        parallaxFactor -= 0.01f;
+    }
 }

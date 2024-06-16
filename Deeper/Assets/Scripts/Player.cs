@@ -272,7 +272,7 @@ public class Player : MonoBehaviour
 
     public void OnNextLevel(int nextLevel)
     {
-        float multiplier = 0.1f * nextLevel;
+        float multiplier = 1 - 0.1f * nextLevel;
         distanceForGrounded *= multiplier;
         jumpForce *= multiplier;
         doubleJumpForce *= multiplier;
