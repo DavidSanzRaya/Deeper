@@ -64,12 +64,13 @@
     <Compile Include="Assets\Scripts\FadeIn.cs" />
     <Compile Include="Assets\Scripts\PreferenceKeys.cs" />
     <Compile Include="Assets\PlayerDeath.cs" />
+    <Compile Include="Assets\Scripts\Checkpoint.cs" />
     <Compile Include="Assets\Scripts\ParallaxCamera.cs.cs" />
+    <Compile Include="Assets\Scripts\CheckpointManager.cs" />
     <Compile Include="Assets\Scripts\ButtonAudioClipsHolder.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\ParallaxBackground.cs.cs" />
     <Compile Include="Assets\scriptss\GameManager.cs" />
-    <Compile Include="Assets\script-checkpoint\Checkpoint.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\ParallaxLayer.cs.cs" />
   </ItemGroup>
